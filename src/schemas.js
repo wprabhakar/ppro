@@ -1,5 +1,5 @@
 module.exports = async db => {
-  const createRideTableSchema = `
+  const createSchema = `
         CREATE TABLE HelloWorld
         (
           Message TEXT
@@ -7,7 +7,7 @@ module.exports = async db => {
     `;
 
   try {
-    await db.run(createRideTableSchema);
+    await db.run(createSchema);
     return db;
   } catch (error) {
     throw Error('Could not create table');
